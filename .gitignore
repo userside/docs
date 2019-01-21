@@ -1,0 +1,11 @@
+.DS_Store
+.cache
+.coverage
+.coverage.*
+.idea
+.vagrant
+.vscode
+.tox
+.env
+build
+_build
