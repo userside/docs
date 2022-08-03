@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'ERP USERSIDE'
-copyright = '2019, Alttrace'
+copyright = '2022, Alttrace'
 author = 'Alttrace'
 
 # The short X.Y version

@@ -7,5 +7,7 @@
 .vscode
 .tox
 .env
+public
 build
 _build
+venv

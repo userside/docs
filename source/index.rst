@@ -1,5 +1,5 @@
-Welcome to ERP USERSIDE's documentation!
-========================================
+Документация ERP USERSIDE
+=========================
 
 .. toctree::
    :maxdepth: 2
