@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: ERP USERSIDE
+  description: |
+    API документация ERP USERSIDE для разработчиков.
+  version: 1.0.0
+servers:
+  - url: 'https://demo.userside.eu'
+paths:
+  /api.php?cat=address&action=add_locality_type:
+    post:
+      tags:
+        - address
+      operationId: add_locality_type
+      summary: Создать новый тип адресной единицы
+      description: Создает новый тип адресной единицы
+      responses:
+        '201':
+          description: Создано успешно
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddressLocalityType'
+        '405':
+          description: invalid input
+      requestBody:
+        $ref: '#/components/requestBodies/AddressLocalityType'
+
+
+components:
+  schemas:
+    AddressLocalityType:
+      title: LocalityType
+      description: Тип адресной единицы
+      type: object
+      required:
+        - name
+        - token
+      properties:
+        id:
+          type: integer
+          readOnly: true
+          example: 1234
+        name:
+          type: string
+          description: Наименование нового типа адресной единицы
+          example: город
+        token:
+          type: string
+          description: Токен, по которому будет происходить сопоставление данного типа с биллингами
+          example: city
+        prefix:
+          type: string
+          description: Префикс, добавляемый перед наименованием адресной единицы этого типа
+          example: г.
+        postfix:
+          type: string
+          description: Суффикс, добавляемый после наименование адресной единицы этого типа
+          example: обл.
+  requestBodies:
+    AddressLocalityType:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AddressLocalityType'

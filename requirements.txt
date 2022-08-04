@@ -1,3 +1,11 @@
 sphinx
 sphinx-autobuild
+
+# Theme
 sphinx_rtd_theme
+
+# OpenAPI
+# https://sphinxcontrib-openapi.readthedocs.io/
+# https://pypi.org/project/sphinxcontrib-openapi/
+mistune==0.8.4
+sphinxcontrib-openapi
